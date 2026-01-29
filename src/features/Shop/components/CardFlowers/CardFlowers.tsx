@@ -35,21 +35,23 @@ export const CardFlowers = ({ product }: CardFlowersProps) => {
         <S.Subtitle>{product.binomialName}</S.Subtitle>
       </S.Header>
 
-      <S.ImageWrapper>
-        <S.Image src={product.imgUrl} alt={product.name} />
-        <S.PriceBadge>€{product.price}</S.PriceBadge>
+      <S.ImageShadow>
+        <S.ImageWrapper>
+          <S.Image src={product.imgUrl} alt={product.name} />
+          <S.PriceBadge>€{product.price}</S.PriceBadge>
 
-        <S.ActionButton
-          type="button"
-          onMouseEnter={handlePrefetch}
-          onClick={handleNavigate}
-          aria-label={t(TRANSLATION.CARD.VIEW_DETAIL, {
-            name: product.name,
-          })}
-        >
-          <IconArrowUpDiagonalSVG width={24} height={24} />
-        </S.ActionButton>
-      </S.ImageWrapper>
+          <S.ActionButton
+            type="button"
+            onMouseEnter={handlePrefetch}
+            onClick={handleNavigate}
+            aria-label={t(TRANSLATION.CARD.VIEW_DETAIL, {
+              name: product.name,
+            })}
+          >
+            <IconArrowUpDiagonalSVG width={24} height={24} />
+          </S.ActionButton>
+        </S.ImageWrapper>
+      </S.ImageShadow>
     </S.Card>
   )
 }
