@@ -9,11 +9,11 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
-    include: ['src/**/*.{test.spec}.{ts,tsx}'],
+    include: ['src/**/*.{test,spec}.{ts,tsx}'],
     exclude: excludeFiles,
     coverage: {
       provider: 'v8',
-      include: ['src/**/*.{ts,tsx}'],
+      include: ["src/**/*.{ts,tsx}"],
       exclude: excludeFiles,
       reporter: ['text', 'html'],
     },
