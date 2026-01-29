@@ -1,20 +1,23 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { STORAGE_KEYS } from '@/constants/LocalStorage'
-import { Theme } from '../Theme'
-import type { ThemeState } from './Theme.types'
+import { STORAGE_KEYS } from '@/constants/LocalStorage.constants'
+import type { Theme } from './Theme.types'
 
-export const useThemeStore = create<ThemeState>()(
+export const useThemeStore = create<{
+  theme: Theme
+  setTheme: (theme: Theme) => void
+  toggleTheme: () => void
+}>()(
   persist(
     (set, get) => ({
-      theme: Theme.LIGHT,
+      theme: 'light',
 
       setTheme: (theme) => set({ theme }),
 
       toggleTheme: () => {
         const current = get().theme
         set({
-          theme: current === Theme.LIGHT ? Theme.DARK : Theme.LIGHT,
+          theme: current === 'light' ? 'dark' : 'light',
         })
       },
     }),

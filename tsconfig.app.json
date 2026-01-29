@@ -5,8 +5,9 @@
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "types": ["vitest/globals"],
+    "types": ["styled-components", "vitest/globals", "node"],
     "skipLibCheck": true,
+    "composite": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -32,7 +33,9 @@
       "@/constants/*": ["src/constants/*"],
       "@/routes/*": ["src/routes/*"],
       "@/pages/*": ["src/pages/*"],
-      "@/features/*": ["src/features/*"]
+      "@/features/*": ["src/features/*"],
+      "@/lib/*": ["src/lib/*"],
+      "@/interfaces/*": ["src/interfaces/*"]
     }
   },
   "include": ["src", "vitest-setup.d.ts"],

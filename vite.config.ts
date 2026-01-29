@@ -18,6 +18,8 @@ export default defineConfig({
       '@/pages': resolve(__dirname, 'src/pages'),
       '@/features': resolve(__dirname, 'src/features'),
       '@/constants': resolve(__dirname, 'src/constants'),
+      '@/lib': resolve(__dirname, 'src/lib'),
+      '@/interfaces': resolve(__dirname, 'src/interfaces'),
     },
   },
 })
