@@ -26,7 +26,13 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@/app/*": ["src/app/*"]
+      "@/app/*": ["src/app/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/store/*": ["src/store/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/routes/*": ["src/routes/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/features/*": ["src/features/*"]
     }
   },
   "include": ["src", "vitest-setup.d.ts"],
