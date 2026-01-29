@@ -1,7 +1,7 @@
 import { RouterProvider } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
-import { router } from '@/routes/Router'
-import { Theme, useThemeStore } from '@/store/Theme'
+import { Router } from '@/routes'
+import { Theme, useThemeStore } from '@/store'
 import { darkTheme, lightTheme } from '@/styles/Theme'
 
 export const App = () => {
@@ -10,7 +10,7 @@ export const App = () => {
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <RouterProvider router={router} />
+      <RouterProvider router={Router} />
     </ThemeProvider>
   )
 }

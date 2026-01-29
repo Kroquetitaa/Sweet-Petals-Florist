@@ -8,16 +8,16 @@ const __dirname = dirname(__filename)
 
 export default defineConfig({
   plugins: [react()],
+
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      '@/app': resolve(__dirname, 'src/app'),
-      '@/styles': resolve(__dirname, 'src/styles'),
-      '@/store': resolve(__dirname, 'src/store'),
-      '@/constants': resolve(__dirname, 'src/constants'),
       '@/routes': resolve(__dirname, 'src/routes'),
+      '@/store': resolve(__dirname, 'src/store'),
+      '@/styles': resolve(__dirname, 'src/styles'),
       '@/pages': resolve(__dirname, 'src/pages'),
       '@/features': resolve(__dirname, 'src/features'),
+      '@/constants': resolve(__dirname, 'src/constants'),
     },
   },
 })

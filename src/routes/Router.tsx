@@ -1,7 +1,7 @@
 import { createBrowserRouter, type RouteObject } from 'react-router-dom'
 import { PublicLayout } from '@/components'
 import { NotFound, Shop } from '@/pages'
-import { ROUTES } from './Routes'
+import { ROUTES } from './Routes.types'
 
 const routes: RouteObject[] = [
   {
@@ -23,4 +23,4 @@ const routes: RouteObject[] = [
   },
 ]
 
-export const router = createBrowserRouter(routes)
+export const Router = createBrowserRouter(routes)
