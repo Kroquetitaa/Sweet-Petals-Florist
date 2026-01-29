@@ -2,7 +2,7 @@ name: Deploy to Heroku
 
 on:
   workflow_run:
-    workflows: ["CI"]
+    workflows: ["ci"]
     branches: [develop]
     types:
       - completed
