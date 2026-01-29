@@ -1,0 +1,24 @@
+{
+  "common": {
+    "loadingProducts": "Cargando productos…",
+    "errorProducts": "Error al cargar productos",
+    "loadingProduct": "Cargando producto…",
+    "errorProduct": "Error al cargar el producto",
+    "search": "Buscar"
+  },
+
+  "shop": {
+    "searchPlaceholder": "Busca en nuestra tienda"
+  },
+
+  "shopDetail": {
+    "breadcrumbHome": "Inicio",
+    "watering": "Regar {{count}} vez por semana",
+    "fertilizer": "Fertilizar con {{type}}",
+    "addToCart": "Añadir al carrito"
+  },
+
+  "card": {
+    "viewDetail": "Ver detalle de {{name}}"
+  }
+}

@@ -1,3 +1,10 @@
+import { IconLogoSVG } from '@/assets/Icons'
+import * as S from './Header.styles.d'
+
 export const Header = () => {
-  return <div>Header</div>
+  return (
+    <S.HeaderContainer>
+      <IconLogoSVG width={50} height={50} />
+    </S.HeaderContainer>
+  )
 }

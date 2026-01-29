@@ -1,6 +1,7 @@
 import { createBrowserRouter, type RouteObject } from 'react-router-dom'
 import { PublicLayout } from '@/components'
 import { NotFound, Shop } from '@/pages'
+import { ShopDetail } from '@/pages/ShopPage/ShopDetail/ShopDetail'
 import { ROUTES } from './Routes.types'
 
 const routes: RouteObject[] = [
@@ -14,6 +15,10 @@ const routes: RouteObject[] = [
       {
         path: ROUTES.SHOP,
         element: <Shop />,
+      },
+      {
+        path: ROUTES.SHOP_DETAIL,
+        element: <ShopDetail />,
       },
     ],
   },

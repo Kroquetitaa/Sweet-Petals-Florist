@@ -1,12 +1,6 @@
-export const Theme = {
+export const THEME = {
   DARK: 'dark',
   LIGHT: 'light',
 } as const
 
-export type Theme = (typeof Theme)[keyof typeof Theme]
-
-export type ThemeState = {
-  theme: Theme
-  setTheme: (theme: Theme) => void
-  toggleTheme: () => void
-}
+export type Theme = (typeof THEME)[keyof typeof THEME]
