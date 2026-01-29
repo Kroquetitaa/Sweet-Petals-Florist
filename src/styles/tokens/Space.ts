@@ -1,0 +1,14 @@
+export const spacing = {
+  xs3: 4,
+  xs2: 8,
+  xs: 16,
+  s: 24,
+  m: 32,
+  l: 40,
+  xl: 48,
+  xl2: 64,
+  xl3: 80,
+  xl4: 96,
+} as const
+
+export type Spacing = keyof typeof spacing

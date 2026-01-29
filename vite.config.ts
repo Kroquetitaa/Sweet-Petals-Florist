@@ -12,6 +12,12 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
       '@/app': resolve(__dirname, 'src/app'),
+      '@/styles': resolve(__dirname, 'src/styles'),
+      '@/store': resolve(__dirname, 'src/store'),
+      '@/constants': resolve(__dirname, 'src/constants'),
+      '@/routes': resolve(__dirname, 'src/routes'),
+      '@/pages': resolve(__dirname, 'src/pages'),
+      '@/features': resolve(__dirname, 'src/features'),
     },
   },
 })
