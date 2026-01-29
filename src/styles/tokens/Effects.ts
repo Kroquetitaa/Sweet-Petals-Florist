@@ -9,6 +9,11 @@ export const effects = {
   E7: 'inset 0px 25px 36.5px -7px rgba(88, 92, 95, 0.16)',
   E8: 'inset 0px 32px 33.2px -7px rgba(88, 92, 95, 0.16)',
   E9: '0px 4px 20px -5px rgba(0, 146, 255, 0.12)',
+  E_CARD: `
+    0px 4px 4px -1px rgba(12, 12, 13, 0.05),
+    0px 4px 4px -1px rgba(12, 12, 13, 0.10)
+  `,
+  E_IMAGE: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 } as const
 
 export type Effect = keyof typeof effects

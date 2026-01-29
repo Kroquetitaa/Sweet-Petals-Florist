@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Card = styled.article`
-
   background-color: ${({ theme }) => theme.palette.neutral.white};
   border-radius: ${({ theme }) => theme.radius.m}px;
   padding: ${({ theme }) => theme.spacing.s}px;
@@ -9,8 +8,10 @@ export const Card = styled.article`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.s}px;
 
-  box-shadow: ${({ theme }) => theme.effects.E1};
+  box-shadow:
+    ${({ theme }) => theme.effects.E_CARD};
 `
+
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
@@ -31,6 +32,12 @@ export const Subtitle = styled.span`
   font-size: ${({ theme }) => theme.typography.body.b1.fontSize};
   color: ${({ theme }) => theme.palette.neutral[800]};
 `
+
+export const ImageShadow = styled.div`
+  border-radius: ${({ theme }) => theme.radius.s}px;
+  box-shadow: ${({ theme }) => theme.effects.E_IMAGE};
+`
+
 export const ImageWrapper = styled.div`
   position: relative;
   border-radius: ${({ theme }) => theme.radius.s}px;
