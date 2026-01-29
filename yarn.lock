@@ -207,6 +207,60 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-1.0.2.tgz#bbe12dca5b4ef983a0d0af4b07b9bc90ea0ababa"
   integrity sha512-6zABk/ECA/QYSCQ1NGiVwwbQerUCZ+TQbp64Q3AgmfNvurHH0j8TtXa1qbShXA6qqkpAj4V5W8pP6mLe1mcMqA==
 
+"@biomejs/biome@^2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@biomejs/biome/-/biome-2.3.13.tgz#966c015d8610137f65c97c081bf69a44b423963b"
+  integrity sha512-Fw7UsV0UAtWIBIm0M7g5CRerpu1eKyKAXIazzxhbXYUyMkwNrkX/KLkGI7b+uVDQ5cLUMfOC9vR60q9IDYDstA==
+  optionalDependencies:
+    "@biomejs/cli-darwin-arm64" "2.3.13"
+    "@biomejs/cli-darwin-x64" "2.3.13"
+    "@biomejs/cli-linux-arm64" "2.3.13"
+    "@biomejs/cli-linux-arm64-musl" "2.3.13"
+    "@biomejs/cli-linux-x64" "2.3.13"
+    "@biomejs/cli-linux-x64-musl" "2.3.13"
+    "@biomejs/cli-win32-arm64" "2.3.13"
+    "@biomejs/cli-win32-x64" "2.3.13"
+
+"@biomejs/cli-darwin-arm64@2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-darwin-arm64/-/cli-darwin-arm64-2.3.13.tgz#417fab5e8b2facf7e289f91d4bbe4275eb2dbbe8"
+  integrity sha512-0OCwP0/BoKzyJHnFdaTk/i7hIP9JHH9oJJq6hrSCPmJPo8JWcJhprK4gQlhFzrwdTBAW4Bjt/RmCf3ZZe59gwQ==
+
+"@biomejs/cli-darwin-x64@2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-darwin-x64/-/cli-darwin-x64-2.3.13.tgz#05abe14ced10125091f68da38ec070f7827b6758"
+  integrity sha512-AGr8OoemT/ejynbIu56qeil2+F2WLkIjn2d8jGK1JkchxnMUhYOfnqc9sVzcRxpG9Ycvw4weQ5sprRvtb7Yhcw==
+
+"@biomejs/cli-linux-arm64-musl@2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-arm64-musl/-/cli-linux-arm64-musl-2.3.13.tgz#aa715dbaf3d4cc97682bcb7357f0e15220321eea"
+  integrity sha512-TUdDCSY+Eo/EHjhJz7P2GnWwfqet+lFxBZzGHldrvULr59AgahamLs/N85SC4+bdF86EhqDuuw9rYLvLFWWlXA==
+
+"@biomejs/cli-linux-arm64@2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-arm64/-/cli-linux-arm64-2.3.13.tgz#e3463498bc23ddba306de3e45d8f9722179065e9"
+  integrity sha512-xvOiFkrDNu607MPMBUQ6huHmBG1PZLOrqhtK6pXJW3GjfVqJg0Z/qpTdhXfcqWdSZHcT+Nct2fOgewZvytESkw==
+
+"@biomejs/cli-linux-x64-musl@2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-x64-musl/-/cli-linux-x64-musl-2.3.13.tgz#579e81f862272ca5a2b9860a2204382767966b7d"
+  integrity sha512-0bdwFVSbbM//Sds6OjtnmQGp4eUjOTt6kHvR/1P0ieR9GcTUAlPNvPC3DiavTqq302W34Ae2T6u5VVNGuQtGlQ==
+
+"@biomejs/cli-linux-x64@2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-x64/-/cli-linux-x64-2.3.13.tgz#fa22633de6effcd571fa2b7983cec98b9fce6383"
+  integrity sha512-s+YsZlgiXNq8XkgHs6xdvKDFOj/bwTEevqEY6rC2I3cBHbxXYU1LOZstH3Ffw9hE5tE1sqT7U23C00MzkXztMw==
+
+"@biomejs/cli-win32-arm64@2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-win32-arm64/-/cli-win32-arm64-2.3.13.tgz#06dd89ec17b897e0c774612fbe83a19fabbb949e"
+  integrity sha512-QweDxY89fq0VvrxME+wS/BXKmqMrOTZlN9SqQ79kQSIc3FrEwvW/PvUegQF6XIVaekncDykB5dzPqjbwSKs9DA==
+
+"@biomejs/cli-win32-x64@2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-win32-x64/-/cli-win32-x64-2.3.13.tgz#55b8cf3e4a16712855ec0462cbdb3a6e645c9466"
+  integrity sha512-trDw2ogdM2lyav9WFQsdsfdVy1dvZALymRpgmWsvSez0BJzBjulhOT/t+wyKeh3pZWvwP3VMs1SoOKwO3wecMQ==
+
 "@csstools/color-helpers@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@csstools/color-helpers/-/color-helpers-5.1.0.tgz#106c54c808cabfd1ab4c602d8505ee584c2996ef"
@@ -1665,6 +1719,11 @@ human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
+
+husky@^9.1.7:
+  version "9.1.7"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-9.1.7.tgz#d46a38035d101b46a70456a850ff4201344c0b2d"
+  integrity sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==
 
 ignore@^5.2.0:
   version "5.3.2"
