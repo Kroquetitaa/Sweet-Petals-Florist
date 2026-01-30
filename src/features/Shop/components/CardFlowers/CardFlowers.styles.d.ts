@@ -49,6 +49,11 @@ export const Image = styled.img`
   height: 300px;
   object-fit: cover;
   display: block;
+
+@media (max-width: 768px) {
+    width: 275px;
+  height: 250px;
+  }
 `
 export const PriceBadge = styled.div`
   position: absolute;

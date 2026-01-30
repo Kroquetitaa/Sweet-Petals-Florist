@@ -28,13 +28,14 @@ describe('SearchInput component', () => {
 
     renderWithTheme(<SearchInput value="" onChange={handleChange} />)
 
-    const input = screen.getByRole('textbox')
+    const input = screen.getByRole('searchbox')
 
     fireEvent.change(input, {
       target: { value: 'Lavanda' },
     })
 
     expect(handleChange).toHaveBeenCalledTimes(1)
+    expect(handleChange).toHaveBeenCalledWith('Lavanda')
   })
 
   it('renders icon when provided', () => {
