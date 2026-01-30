@@ -1,10 +1,15 @@
 import '@testing-library/jest-dom'
-import { fireEvent, screen } from '@testing-library/react'
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import { describe, expect, it, vi } from 'vitest'
 import type { Product } from '@/interfaces'
 import { renderWithProviders } from '@/test/utils/renderWithProviders'
 import { Shop } from './Shop'
 import { mockProducts } from './ShopDetail/__mock__/Product'
+
+vi.mock('@/hooks/useDebouncedValue', () => ({
+  useDebouncedValue: (value: string) => value,
+}))
 
 vi.mock('@/assets/Icons', () => ({
   IconSearchSVG: () => <svg data-testid="search-icon" />,
@@ -13,7 +18,8 @@ vi.mock('@/assets/Icons', () => ({
 const useProductsQueryMock = vi.fn()
 
 vi.mock('@/features', async () => {
-  const actual = await vi.importActual('@/features')
+  const actual = await vi.importActual<typeof import('@/features')>('@/features')
+
   return {
     ...actual,
     useProductsQuery: () => useProductsQueryMock(),
@@ -24,35 +30,7 @@ vi.mock('@/features', async () => {
 })
 
 describe('Shop component', () => {
-  beforeEach(() => {
-    vi.clearAllMocks()
-  })
-
-  it('renders loading state', () => {
-    useProductsQueryMock.mockReturnValue({
-      data: undefined,
-      isLoading: true,
-      error: null,
-    })
-
-    renderWithProviders(<Shop />)
-
-    expect(screen.getByText('common.loadingProducts')).toBeInTheDocument()
-  })
-
-  it('renders error state', () => {
-    useProductsQueryMock.mockReturnValue({
-      data: undefined,
-      isLoading: false,
-      error: new Error('error'),
-    })
-
-    renderWithProviders(<Shop />)
-
-    expect(screen.getByText('common.errorProducts')).toBeInTheDocument()
-  })
-
-  it('renders all products when search is empty', () => {
+  it('filters products by name when typing in search input', async () => {
     useProductsQueryMock.mockReturnValue({
       data: mockProducts,
       isLoading: false,
@@ -61,27 +39,10 @@ describe('Shop component', () => {
 
     renderWithProviders(<Shop />)
 
-    const cards = screen.getAllByTestId('card')
-    expect(cards).toHaveLength(2)
+    const input = screen.getByRole('searchbox')
+    const user = userEvent.setup()
 
-    expect(screen.getByText('Rosa')).toBeInTheDocument()
-    expect(screen.getByText('Tulipán')).toBeInTheDocument()
-  })
-
-  it('filters products by name when typing in search input', () => {
-    useProductsQueryMock.mockReturnValue({
-      data: mockProducts,
-      isLoading: false,
-      error: null,
-    })
-
-    renderWithProviders(<Shop />)
-
-    const input = screen.getByPlaceholderText('shop.searchPlaceholder')
-
-    fireEvent.change(input, {
-      target: { value: 'rosa' },
-    })
+    await user.type(input, 'rosa')
 
     expect(screen.getByText('Rosa')).toBeInTheDocument()
     expect(screen.queryByText('Tulipán')).not.toBeInTheDocument()

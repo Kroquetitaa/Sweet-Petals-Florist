@@ -4,7 +4,8 @@
     "errorProducts": "Error loading products",
     "loadingProduct": "Loading product…",
     "errorProduct": "Error loading the product",
-    "search": "Search"
+    "search": "Search",
+    "clear": "Clear"
   },
 
   "shop": {

@@ -1,30 +1,46 @@
 import { useTranslation } from 'react-i18next'
 import { TRANSLATION } from '@/i18n/translations/keys'
 import * as S from './SearchInput.styles.d'
+import type { SearchInputProps } from './SearchInput.types'
 
-type SearchInputProps = {
-  placeholder?: string
-  value?: string
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
-  width?: number | string
-  icon?: React.ReactNode
-}
-
-export const SearchInput = ({ placeholder, value, onChange, width, icon }: SearchInputProps) => {
+export const SearchInput = ({
+  placeholder,
+  value,
+  onChange,
+  width,
+  icon,
+  error,
+  errorMessage,
+  disabled,
+  onClear,
+  $fullWidth,
+  ...inputProps
+}: SearchInputProps) => {
   const { t } = useTranslation()
 
   return (
-    <S.Container width={width}>
-      {icon && <S.IconWrapper>{icon}</S.IconWrapper>}
+    <S.Container $width={width} $fullWidth={$fullWidth}>
       <S.InputContainer>
+        {icon && <S.IconWrapper>{icon}</S.IconWrapper>}
+
         <S.Input
-          type="text"
-          placeholder={placeholder ?? t(TRANSLATION.COMMON.SEARCH)}
+          {...inputProps}
+          type="search"
           value={value}
-          onChange={onChange}
-          hasIcon={!!icon}
+          disabled={disabled}
+          $hasIcon={!!icon}
+          $hasError={error}
+          aria-invalid={error}
+          placeholder={placeholder ?? t(TRANSLATION.COMMON.SEARCH)}
+          onChange={(e) => onChange?.(e.target.value)}
         />
+
+        {value && onClear && !disabled && (
+          <S.ClearButton type="button" aria-label={t(TRANSLATION.COMMON.CLEAR)} onClick={onClear} />
+        )}
       </S.InputContainer>
+
+      {error && errorMessage && <S.ErrorText>{errorMessage}</S.ErrorText>}
     </S.Container>
   )
 }

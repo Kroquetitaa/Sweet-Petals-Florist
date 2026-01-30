@@ -4,7 +4,8 @@
     "errorProducts": "Error al cargar productos",
     "loadingProduct": "Cargando producto…",
     "errorProduct": "Error al cargar el producto",
-    "search": "Buscar"
+    "search": "Buscar",
+    "clear": "Limpiar"
   },
 
   "shop": {

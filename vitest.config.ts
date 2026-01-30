@@ -8,9 +8,9 @@ export default mergeConfig(
   viteConfig,
   defineConfig({
     test: {
+      setupFiles: 'src/test/utils/setupTests.ts',
       environment: 'jsdom',
       globals: true,
-      setupFiles: 'src/setupTest.ts',
       include: ['src/**/*.{test,spec}.{ts,tsx}'],
       coverage: {
         provider: 'v8',

@@ -29,6 +29,7 @@ export const TRANSLATION = {
     LOADING_PRODUCT: 'loadingProduct',
     ERROR_PRODUCT: 'errorProduct',
     SEARCH: 'search',
+    CLEAR: 'clear',
   }),
 
   SHOP: generateTranslationKeys(BASE_KEYS.SHOP, {
