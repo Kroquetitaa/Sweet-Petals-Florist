@@ -1,4 +1,5 @@
 export * from './Header/Header'
 export * from './Layout'
 export * from './SearchInput/SearchInput'
+export * from './SearchInput/SearchInputSkeleton/SearchInputSkeleton'
 export * from './Section/Section'

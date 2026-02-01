@@ -37,7 +37,7 @@ export const CardFlowers = ({ product }: CardFlowersProps) => {
 
       <S.ImageShadow>
         <S.ImageWrapper>
-          <S.Image src={product.imgUrl} alt={product.name} />
+          <S.Image src={product.imgUrl} alt={product.name} loading="lazy" decoding="async" />
           <S.PriceBadge>€{product.price}</S.PriceBadge>
 
           <S.ActionButton
